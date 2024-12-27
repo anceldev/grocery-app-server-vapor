@@ -8,16 +8,25 @@
 import Foundation
 import Vapor
 import Fluent
+import GroceryAppShareDTO
 
 // /api/register
 // /api/login
 
-class UserController: RouteCollection {
+class UserController: RouteCollection, @unchecked Sendable {
     func boot(routes: any Vapor.RoutesBuilder) throws {
         let api = routes.grouped("api")
         
-        api.post("register", use: register)
-        api.post("login", use: login)
+//        api.post("register", use: register)
+//        api.post("login", use: login)
+        
+        api.post("register") { [self] req async throws -> RegisterResponseDTO in
+            try await register(req: req)
+        }
+        
+        api.post("login") { [self] req async throws -> LoginResponseDTO in
+            try await login(req: req)
+        }
     }
     
     func login(req: Request) async throws -> LoginResponseDTO {

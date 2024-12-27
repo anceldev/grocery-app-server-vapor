@@ -1,5 +1,5 @@
 {
-  "originHash" : "852feb729ba042eb7b2136d5889b3af6cdaab17a9ddd6f9fbd605d82a7a3bc72",
+  "originHash" : "e8d4dc1a434f68b58786061349ace398ef4ac938f8b2e104e126d531fb8a967d",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -53,6 +53,15 @@
       "state" : {
         "revision" : "fd57101e426d3edf66a32ba63a7d0b8ced4d7499",
         "version" : "2.10.0"
+      }
+    },
+    {
+      "identity" : "groceryappsharedto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/anceldev/GroceryAppShareDTO.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "75b12f20a835508937450d8312d3cc795c31bd0b"
       }
     },
     {
